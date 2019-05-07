@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 #import "RunLoop/RunLoopViewController.h"
+#import "Orientation/OrientationViewController.h"
+#import "BaseViewController.h"
 
 typedef NS_ENUM(NSInteger, Topic)  {
-  TopicRunLoop, TopicAll
+  TopicRunLoop, TopicOrientation, TopicAll
 };
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -19,7 +21,10 @@ typedef NS_ENUM(NSInteger, Topic)  {
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+  NSArray *_topicTitles;
+  NSArray *_topicViewControllerClasses;
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -27,37 +32,46 @@ typedef NS_ENUM(NSInteger, Topic)  {
   self.tableView.dataSource = self;
   self.tableView.delegate = self;
   [self.view addSubview:self.tableView];
+
+  [self setupTable];
+
+}
+
+// To add item: 1. add to enum, 2. add _topicTitles, _topicViewControllerClasses, 3 impl ViewController
+- (void)setupTable {
+  _topicTitles = @[@"RunLoop", @"Orientation"];
+  _topicViewControllerClasses = @[[RunLoopViewController class], [OrientationViewController class]];
+
+  NSAssert(_topicTitles.count == TopicAll, @"_topicTitles should match all Topic except 'TopicAll'");
+  NSAssert(_topicViewControllerClasses.count == TopicAll, @"_topicTitles should match all Topic except 'TopicAll'");
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+  UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
+  switch (indexPath.row) {
+      default:
+      cell.textLabel.text = _topicTitles[indexPath.row];
+  }
+  return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  BaseViewController *vc;
+  switch (indexPath.row) {
+    default:
+      vc = [[_topicViewControllerClasses[indexPath.row] alloc] init];
+      [vc setTitle:_topicTitles[indexPath.row]];
+      break;
+  }
+  [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
   return 1;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:nil];
-  switch (indexPath.row) {
-    case TopicRunLoop:
-      cell.textLabel.text = @"RunLoop";
-      return cell;
-  }
-  return cell;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
   return TopicAll;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-  UIViewController *vc;
-  switch (indexPath.row) {
-    case TopicRunLoop:
-      vc = [[RunLoopViewController alloc] init];
-      break;
-
-    default:
-      break;
-  }
-  [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end
