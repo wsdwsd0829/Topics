@@ -15,6 +15,7 @@
 		C090C93D2281524B007ECDBD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C93C2281524B007ECDBD /* main.m */; };
 		C090C9472281524B007ECDBD /* TopicsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C9462281524B007ECDBD /* TopicsTests.m */; };
 		C090C9522281524B007ECDBD /* TopicsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C9512281524B007ECDBD /* TopicsUITests.m */; };
+		C090C962228154B9007ECDBD /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C961228154B9007ECDBD /* RunLoopViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		C090C94D2281524B007ECDBD /* TopicsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TopicsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C090C9512281524B007ECDBD /* TopicsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicsUITests.m; sourceTree = "<group>"; };
 		C090C9532281524B007ECDBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C090C960228154B9007ECDBD /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
+		C090C961228154B9007ECDBD /* RunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 		C090C92C22815249007ECDBD /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				C090C95F2281547D007ECDBD /* RunLoop */,
 				C090C92D22815249007ECDBD /* AppDelegate.h */,
 				C090C92E22815249007ECDBD /* AppDelegate.m */,
 				C090C93022815249007ECDBD /* ViewController.h */,
@@ -130,6 +134,15 @@
 				C090C9532281524B007ECDBD /* Info.plist */,
 			);
 			path = TopicsUITests;
+			sourceTree = "<group>";
+		};
+		C090C95F2281547D007ECDBD /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				C090C960228154B9007ECDBD /* RunLoopViewController.h */,
+				C090C961228154B9007ECDBD /* RunLoopViewController.m */,
+			);
+			path = RunLoop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C090C962228154B9007ECDBD /* RunLoopViewController.m in Sources */,
 				C090C93222815249007ECDBD /* ViewController.m in Sources */,
 				C090C93D2281524B007ECDBD /* main.m in Sources */,
 				C090C92F22815249007ECDBD /* AppDelegate.m in Sources */,
