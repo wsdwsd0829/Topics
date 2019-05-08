@@ -42,10 +42,7 @@ void myObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void 
 @implementation RunLoopViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-  self.navigationItem.title = @"RunLoop";
-  self.edgesForExtendedLayout = UIRectEdgeNone;
-  self.view.backgroundColor = [UIColor blueColor];
+  [super viewDidLoad];
   [self createRunLoopObserver];
   [self runRunLoop];
 }

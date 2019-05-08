@@ -28,6 +28,7 @@ typedef NS_ENUM(NSInteger, Topic)  {
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.navigationItem.title = @"Topics";
   self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
   self.tableView.dataSource = self;
   self.tableView.delegate = self;
