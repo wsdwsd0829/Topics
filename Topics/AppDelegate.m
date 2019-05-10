@@ -25,8 +25,15 @@
   self.window.rootViewController = nvc;
   self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];
-  [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+
+  [self deviceInfo];
   return YES;
+}
+
+- (void)deviceInfo {
+  UIDevice *currentDevice = [UIDevice currentDevice];
+  currentDevice.batteryMonitoringEnabled = YES;
+  NSLog(@"%@", currentDevice);
 }
 
 

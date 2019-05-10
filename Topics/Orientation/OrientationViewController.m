@@ -19,12 +19,12 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self start];
-    // Do any additional setup after loading the view.
 
+  [self setNeedsStatusBarAppearanceUpdate]; // Hide Status Bar: Step 1.
 }
 
 - (BOOL)prefersStatusBarHidden {
-  return YES;
+  return YES; // Hide Status Bar: Step 2.
 }
 
 - (void)start {

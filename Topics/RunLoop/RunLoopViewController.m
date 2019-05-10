@@ -45,6 +45,7 @@ void myObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void 
   [super viewDidLoad];
   [self createRunLoopObserver];
   [self runRunLoop];
+//  [self runRunLoop2];
 }
 
 // TODO: use this in background thread and add timer on it.
@@ -62,14 +63,36 @@ void myObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void 
 }
 
 - (void)runRunLoop {
+  NSLog(@"runRunLoop");
   NSInteger loopCount = 1;
   do
   {
     // Run the run loop: This is blocking the RunLoopViewController from being pushed for 1 second.
+    // Then runloop that run here will exit.
     [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:1]];
     loopCount--;
   }
   while (loopCount);
+}
+
+// 05.08
+- (void)runRunLoop2 {
+  NSLog(@"runRunLoop2");
+  BOOL done = NO;
+  do {
+    // Start the run loop but return after each source is handled.
+    // This is blocking.
+    SInt32 result = CFRunLoopRunInMode(kCFRunLoopDefaultMode, 2, YES);
+
+    // If a source explicitly stopped the run loop, or if there are no
+    // sources or timers, go ahead and exit.
+    if ((result == kCFRunLoopRunStopped) || (result == kCFRunLoopRunFinished)) {
+      done = YES;
+    } else {
+
+    }
+  }
+  while (!done);
 }
 
 @end
