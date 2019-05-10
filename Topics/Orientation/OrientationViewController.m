@@ -29,10 +29,10 @@
 
 - (void)start {
   [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-  [[NSNotificationCenter defaultCenter] addObserver:self
-                                           selector:@selector(deviceOrientationChanged:)
-                                               name:UIDeviceOrientationDidChangeNotification
-                                             object:nil];
+//  [[NSNotificationCenter defaultCenter] addObserver:self
+//                                           selector:@selector(deviceOrientationChanged:)
+//                                               name:UIDeviceOrientationDidChangeNotification
+//                                             object:nil];
   [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(interfaceOrientationChanged:)
                                                name:UIApplicationDidChangeStatusBarOrientationNotification
@@ -103,6 +103,8 @@
 // This information is on the app *after* window frame is changed.
 - (void)interfaceOrientationChanged:(NSNotification *)notification {
   UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+  //[notification.userInfo[UIApplicationStatusBarOrientationUserInfoKey] intValue]; // return old value???
+  //
   switch (interfaceOrientation) {
     case UIInterfaceOrientationPortrait:
      NSLog(@"UIInterfaceOrientationPortrait");
@@ -117,7 +119,40 @@
       NSLog(@"UIInterfaceOrientationLandscapeRight");
       break;
     case UIInterfaceOrientationUnknown:
+      // Initial is Unknown.
       NSLog(@"UIInterfaceOrientationLandscapeUnknown");
+      UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+      switch (orientation) {
+        case UIDeviceOrientationFaceUp: {
+          NSLog(@"UIDeviceOrientationFaceUp");
+          break;
+        }
+        case UIDeviceOrientationFaceDown: {
+          NSLog(@"UIDeviceOrientationFaceDown");
+          break;
+        }
+        case UIDeviceOrientationLandscapeLeft: {
+          NSLog(@"UIDeviceOrientationLandscapeLeft");
+          break;
+        }
+        case UIDeviceOrientationLandscapeRight: {
+          NSLog(@"UIDeviceOrientationLandscapeRight");
+          break;
+        }
+        case UIDeviceOrientationPortrait: {
+          NSLog(@"UIDeviceOrientationPortrait");
+          break;
+        }
+        case UIDeviceOrientationPortraitUpsideDown: {
+          NSLog(@"UIDeviceOrientationPortraitUpsideDown");
+          break;
+        }
+        case UIDeviceOrientationUnknown: {
+          NSLog(@"UIDeviceOrientationUnknown");
+          [self interfaceOrientationChanged:notification];
+          break;
+        }
+      }
       break;
   }
 }
