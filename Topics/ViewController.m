@@ -9,10 +9,11 @@
 #import "ViewController.h"
 #import "RunLoop/RunLoopViewController.h"
 #import "Orientation/OrientationViewController.h"
+#import "GCD/GCDViewController.h"
 #import "BaseViewController.h"
 
 typedef NS_ENUM(NSInteger, Topic)  {
-  TopicRunLoop, TopicOrientation, TopicAll
+  TopicRunLoop, TopicOrientation, TopicGCD, TopicAll
 };
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -40,8 +41,8 @@ typedef NS_ENUM(NSInteger, Topic)  {
 
 // To add item: 1. add to enum, 2. add _topicTitles, _topicViewControllerClasses, 3 impl ViewController
 - (void)setupTable {
-  _topicTitles = @[@"RunLoop", @"Orientation"];
-  _topicViewControllerClasses = @[[RunLoopViewController class], [OrientationViewController class]];
+  _topicTitles = @[@"RunLoop", @"Orientation", @"GCD"];
+  _topicViewControllerClasses = @[[RunLoopViewController class], [OrientationViewController class], [GCDViewController class]];
 
   NSAssert(_topicTitles.count == TopicAll, @"_topicTitles should match all Topic except 'TopicAll'");
   NSAssert(_topicViewControllerClasses.count == TopicAll, @"_topicTitles should match all Topic except 'TopicAll'");

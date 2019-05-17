@@ -19,6 +19,7 @@
 		C090C9472281524B007ECDBD /* TopicsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C9462281524B007ECDBD /* TopicsTests.m */; };
 		C090C9522281524B007ECDBD /* TopicsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C9512281524B007ECDBD /* TopicsUITests.m */; };
 		C090C962228154B9007ECDBD /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C961228154B9007ECDBD /* RunLoopViewController.m */; };
+		C0F8BB0A228E96CD0018978D /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F8BB09228E96CD0018978D /* GCDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		C090C9532281524B007ECDBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C090C960228154B9007ECDBD /* RunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopViewController.h; sourceTree = "<group>"; };
 		C090C961228154B9007ECDBD /* RunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopViewController.m; sourceTree = "<group>"; };
+		C0F8BB08228E96CD0018978D /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
+		C0F8BB09228E96CD0018978D /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,7 @@
 		C090C92C22815249007ECDBD /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				C0F8BB04228E96670018978D /* GCD */,
 				C020C8BB22823D410041A5EC /* Orientation */,
 				C090C95F2281547D007ECDBD /* RunLoop */,
 				C090C92D22815249007ECDBD /* AppDelegate.h */,
@@ -166,6 +170,15 @@
 				C090C961228154B9007ECDBD /* RunLoopViewController.m */,
 			);
 			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		C0F8BB04228E96670018978D /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				C0F8BB08228E96CD0018978D /* GCDViewController.h */,
+				C0F8BB09228E96CD0018978D /* GCDViewController.m */,
+			);
+			path = GCD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +314,7 @@
 				C090C962228154B9007ECDBD /* RunLoopViewController.m in Sources */,
 				C020C8C12282469F0041A5EC /* BaseViewController.m in Sources */,
 				C090C93222815249007ECDBD /* ViewController.m in Sources */,
+				C0F8BB0A228E96CD0018978D /* GCDViewController.m in Sources */,
 				C020C8C4228258EF0041A5EC /* BaseWindow.m in Sources */,
 				C020C8BE22823D5F0041A5EC /* OrientationViewController.m in Sources */,
 				C090C93D2281524B007ECDBD /* main.m in Sources */,
