@@ -10,6 +10,7 @@
 		C020C8BE22823D5F0041A5EC /* OrientationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020C8BD22823D5F0041A5EC /* OrientationViewController.m */; };
 		C020C8C12282469F0041A5EC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020C8C02282469F0041A5EC /* BaseViewController.m */; };
 		C020C8C4228258EF0041A5EC /* BaseWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C020C8C3228258EF0041A5EC /* BaseWindow.m */; };
+		C056751522923960005177C6 /* PerfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C056751422923960005177C6 /* PerfViewController.m */; };
 		C090C92F22815249007ECDBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C92E22815249007ECDBD /* AppDelegate.m */; };
 		C090C93222815249007ECDBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C93122815249007ECDBD /* ViewController.m */; };
 		C090C93522815249007ECDBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C090C93322815249007ECDBD /* Main.storyboard */; };
@@ -46,6 +47,8 @@
 		C020C8C02282469F0041A5EC /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		C020C8C2228258EF0041A5EC /* BaseWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWindow.h; sourceTree = "<group>"; };
 		C020C8C3228258EF0041A5EC /* BaseWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWindow.m; sourceTree = "<group>"; };
+		C056751322923960005177C6 /* PerfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerfViewController.h; sourceTree = "<group>"; };
+		C056751422923960005177C6 /* PerfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerfViewController.m; sourceTree = "<group>"; };
 		C090C92A22815249007ECDBD /* Topics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C090C92D22815249007ECDBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C090C92E22815249007ECDBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -102,6 +105,15 @@
 			path = Orientation;
 			sourceTree = "<group>";
 		};
+		C056751222923942005177C6 /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				C056751322923960005177C6 /* PerfViewController.h */,
+				C056751422923960005177C6 /* PerfViewController.m */,
+			);
+			path = Performance;
+			sourceTree = "<group>";
+		};
 		C090C92122815249007ECDBD = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +137,7 @@
 		C090C92C22815249007ECDBD /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				C056751222923942005177C6 /* Performance */,
 				C0F8BB04228E96670018978D /* GCD */,
 				C020C8BB22823D410041A5EC /* Orientation */,
 				C090C95F2281547D007ECDBD /* RunLoop */,
@@ -311,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C056751522923960005177C6 /* PerfViewController.m in Sources */,
 				C090C962228154B9007ECDBD /* RunLoopViewController.m in Sources */,
 				C020C8C12282469F0041A5EC /* BaseViewController.m in Sources */,
 				C090C93222815249007ECDBD /* ViewController.m in Sources */,
