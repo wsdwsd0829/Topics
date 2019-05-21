@@ -7,6 +7,7 @@
 //
 
 #import "RunLoopViewController.h"
+#import "RunLoopSource.h"
 
 @interface RunLoopViewController ()
 
@@ -44,8 +45,9 @@ void myObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void 
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self createRunLoopObserver];
-  [self runRunLoop];
+//  [self runRunLoop];
 //  [self runRunLoop2];
+  [self runLoopSource];
 }
 
 // TODO: use this in background thread and add timer on it.
@@ -93,6 +95,32 @@ void myObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void 
     }
   }
   while (!done);
+}
+
+#pragma mark RunLoopSource
+
+- (void)runLoopSource {
+  RunLoopSource *source = [[RunLoopSource alloc] init];
+  //This will work!
+  [source addToCurrentRunLoop];
+  [source addCommand:1 withData:nil];
+  // note all of them will fire together cause it's current runloop if not dipatch to main.
+  // will fire at next runloop?
+  [source fireAllCommandsOnRunLoop:CFRunLoopGetCurrent()];
+
+  // Why this not working?! may be the thread is gone when block finishes.
+  // TODO try create a thread & see how Texture uses runloop. 
+  /*
+  __block CFRunLoopRef ref;
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    ref = CFRunLoopGetCurrent();
+    RunLoopSource *source2 = [[RunLoopSource alloc] init];
+    [source2 addToCurrentRunLoop];
+    [source2 addCommand:2 withData:nil];
+    [source2 fireAllCommandsOnRunLoop:ref];
+  });
+  */
+
 }
 
 @end

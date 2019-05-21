@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RunLoop/RunLoopSource.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (void)registerSource:(RunLoopContext*)sourceInfo;
+- (void)removeSource:(RunLoopContext*)sourceInfo;
 
 @end
+
 

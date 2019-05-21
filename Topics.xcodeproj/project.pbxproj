@@ -21,6 +21,7 @@
 		C090C9522281524B007ECDBD /* TopicsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C9512281524B007ECDBD /* TopicsUITests.m */; };
 		C090C962228154B9007ECDBD /* RunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C961228154B9007ECDBD /* RunLoopViewController.m */; };
 		C0F8BB0A228E96CD0018978D /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F8BB09228E96CD0018978D /* GCDViewController.m */; };
+		C0F8BB122293CD600018978D /* RunLoopSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F8BB112293CD600018978D /* RunLoopSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		C090C961228154B9007ECDBD /* RunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopViewController.m; sourceTree = "<group>"; };
 		C0F8BB08228E96CD0018978D /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		C0F8BB09228E96CD0018978D /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
+		C0F8BB102293CD600018978D /* RunLoopSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopSource.h; sourceTree = "<group>"; };
+		C0F8BB112293CD600018978D /* RunLoopSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RunLoopSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 			children = (
 				C090C960228154B9007ECDBD /* RunLoopViewController.h */,
 				C090C961228154B9007ECDBD /* RunLoopViewController.m */,
+				C0F8BB102293CD600018978D /* RunLoopSource.h */,
+				C0F8BB112293CD600018978D /* RunLoopSource.m */,
 			);
 			path = RunLoop;
 			sourceTree = "<group>";
@@ -328,6 +333,7 @@
 				C090C962228154B9007ECDBD /* RunLoopViewController.m in Sources */,
 				C020C8C12282469F0041A5EC /* BaseViewController.m in Sources */,
 				C090C93222815249007ECDBD /* ViewController.m in Sources */,
+				C0F8BB122293CD600018978D /* RunLoopSource.m in Sources */,
 				C0F8BB0A228E96CD0018978D /* GCDViewController.m in Sources */,
 				C020C8C4228258EF0041A5EC /* BaseWindow.m in Sources */,
 				C020C8BE22823D5F0041A5EC /* OrientationViewController.m in Sources */,
