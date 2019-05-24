@@ -10,7 +10,9 @@
 #import "ViewController.h"
 #import "BaseWindow.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () {
+  NSMutableArray *sourcesToPing;
+}
 
 @end
 
@@ -25,6 +27,8 @@
   self.window.rootViewController = nvc;
   self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];
+
+  sourcesToPing = [[NSMutableArray alloc] init];
 
   [self deviceInfo];
   return YES;
@@ -63,5 +67,31 @@
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+@end
+
+@implementation AppDelegate (RunLoop)
+
+- (void)registerSource:(RunLoopContext*)sourceInfo
+{
+  [sourcesToPing addObject:sourceInfo];
+}
+
+- (void)removeSource:(RunLoopContext*)sourceInfo
+{
+  id    objToRemove = nil;
+
+  for (RunLoopContext* context in sourcesToPing)
+  {
+    if ([context isEqual:sourceInfo])
+    {
+      objToRemove = context;
+      break;
+    }
+  }
+
+  if (objToRemove)
+    [sourcesToPing removeObject:objToRemove];
+}
 
 @end
