@@ -108,21 +108,23 @@ void myObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void 
   // will fire at next runloop?
   [source fireAllCommandsOnRunLoop:CFRunLoopGetCurrent()];
 
+  CFRunLoopRef myref = CFRunLoopGetCurrent();
+  NSLog(@"myref: %@", myref);
   // Why this not working?! may be the thread is gone when block finishes.
   // TODO try create a thread & see how Texture uses runloop.
   // ASDK use thread pool
   // Runloop use the thread it's created on.
-  /*
   __block CFRunLoopRef ref;
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
     ref = CFRunLoopGetCurrent();
+    NSLog(@"ref: %@", ref);
     RunLoopSource *source2 = [[RunLoopSource alloc] init];
     [source2 addToCurrentRunLoop];
     [source2 addCommand:2 withData:nil];
     [source2 fireAllCommandsOnRunLoop:ref];
+    sleep(1);
+    CFRunLoopRunInMode(kCFRunLoopDefaultMode, 2, YES); // Thread can work without runloop running
   });
-  */
-
 }
 
 @end

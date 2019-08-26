@@ -13,9 +13,10 @@
 #import "BaseViewController.h"
 #import "Performance/PerfViewController.h"
 #import "CoreText/CoreTextViewController.h"
+#import "AutoReleaseViewController/AutoReleaseViewController.h"
 
 typedef NS_ENUM(NSInteger, Topic)  {
-  TopicRunLoop, TopicOrientation, TopicGCD, TopicPerf, TopicCoreText, TopicAll
+  TopicRunLoop, TopicOrientation, TopicGCD, TopicPerf, TopicAutoRelease, TopicCoreText, TopicAll
 };
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
@@ -43,13 +44,13 @@ typedef NS_ENUM(NSInteger, Topic)  {
 
 // To add item: 1. add to enum, 2. add _topicTitles, _topicViewControllerClasses, 3 impl ViewController
 - (void)setupTable {
-  _topicTitles = @[@"RunLoop", @"Orientation", @"GCD",  @"Performance", @"CoreText"];
+  _topicTitles = @[@"RunLoop", @"Orientation", @"GCD",  @"Performance", @"AutoRelease", @"CoreText"];
   _topicViewControllerClasses = @[ [RunLoopViewController class],
                                    [OrientationViewController class],
                                    [GCDViewController class],
                                    [PerfViewController class],
+                                   [AutoReleaseViewController class],
                                    [CoreTextViewController class] ];
-
   NSAssert(_topicTitles.count == TopicAll, @"_topicTitles should match all Topic except 'TopicAll'");
   NSAssert(_topicViewControllerClasses.count == TopicAll, @"_topicTitles should match all Topic except 'TopicAll'");
 }
