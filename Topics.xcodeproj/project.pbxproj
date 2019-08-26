@@ -10,9 +10,10 @@
 		C020C8BE22823D5F0041A5EC /* OrientationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020C8BD22823D5F0041A5EC /* OrientationViewController.m */; };
 		C020C8C12282469F0041A5EC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020C8C02282469F0041A5EC /* BaseViewController.m */; };
 		C020C8C4228258EF0041A5EC /* BaseWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C020C8C3228258EF0041A5EC /* BaseWindow.m */; };
+		C0359CEB231458540021C865 /* CoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0359CEA231458540021C865 /* CoreTextView.m */; };
 		C056751522923960005177C6 /* PerfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C056751422923960005177C6 /* PerfViewController.m */; };
-		C085534A2313AF5C003EAE34 /* CoreTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C08553492313AF5C003EAE34 /* CoreTextViewController.m */; };
 		C056751922924C05005177C6 /* AutoReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C056751822924C05005177C6 /* AutoReleaseViewController.m */; };
+		C085534A2313AF5C003EAE34 /* CoreTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C08553492313AF5C003EAE34 /* CoreTextViewController.m */; };
 		C090C92F22815249007ECDBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C92E22815249007ECDBD /* AppDelegate.m */; };
 		C090C93222815249007ECDBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C93122815249007ECDBD /* ViewController.m */; };
 		C090C93522815249007ECDBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C090C93322815249007ECDBD /* Main.storyboard */; };
@@ -50,12 +51,14 @@
 		C020C8C02282469F0041A5EC /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		C020C8C2228258EF0041A5EC /* BaseWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseWindow.h; sourceTree = "<group>"; };
 		C020C8C3228258EF0041A5EC /* BaseWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWindow.m; sourceTree = "<group>"; };
+		C0359CE9231458540021C865 /* CoreTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextView.h; sourceTree = "<group>"; };
+		C0359CEA231458540021C865 /* CoreTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextView.m; sourceTree = "<group>"; };
 		C056751322923960005177C6 /* PerfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerfViewController.h; sourceTree = "<group>"; };
 		C056751422923960005177C6 /* PerfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerfViewController.m; sourceTree = "<group>"; };
-		C08553482313AF5C003EAE34 /* CoreTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextViewController.h; sourceTree = "<group>"; };
-		C08553492313AF5C003EAE34 /* CoreTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextViewController.m; sourceTree = "<group>"; };
 		C056751722924C05005177C6 /* AutoReleaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoReleaseViewController.h; sourceTree = "<group>"; };
 		C056751822924C05005177C6 /* AutoReleaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoReleaseViewController.m; sourceTree = "<group>"; };
+		C08553482313AF5C003EAE34 /* CoreTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextViewController.h; sourceTree = "<group>"; };
+		C08553492313AF5C003EAE34 /* CoreTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextViewController.m; sourceTree = "<group>"; };
 		C090C92A22815249007ECDBD /* Topics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C090C92D22815249007ECDBD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C090C92E22815249007ECDBD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,15 +126,6 @@
 			path = Performance;
 			sourceTree = "<group>";
 		};
-		C08553472313AEA6003EAE34 /* CoreText */ = {
-			isa = PBXGroup;
-			children = (
-				C08553482313AF5C003EAE34 /* CoreTextViewController.h */,
-				C08553492313AF5C003EAE34 /* CoreTextViewController.m */,
-			);
-			path = CoreText;
-            sourceTree = "<group>";
-        };
 		C056751622924BEB005177C6 /* AutoReleaseViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +133,17 @@
 				C056751822924C05005177C6 /* AutoReleaseViewController.m */,
 			);
 			path = AutoReleaseViewController;
+			sourceTree = "<group>";
+		};
+		C08553472313AEA6003EAE34 /* CoreText */ = {
+			isa = PBXGroup;
+			children = (
+				C08553482313AF5C003EAE34 /* CoreTextViewController.h */,
+				C08553492313AF5C003EAE34 /* CoreTextViewController.m */,
+				C0359CE9231458540021C865 /* CoreTextView.h */,
+				C0359CEA231458540021C865 /* CoreTextView.m */,
+			);
+			path = CoreText;
 			sourceTree = "<group>";
 		};
 		C090C92122815249007ECDBD = {
@@ -358,6 +363,7 @@
 				C056751522923960005177C6 /* PerfViewController.m in Sources */,
 				C056751922924C05005177C6 /* AutoReleaseViewController.m in Sources */,
 				C090C962228154B9007ECDBD /* RunLoopViewController.m in Sources */,
+				C0359CEB231458540021C865 /* CoreTextView.m in Sources */,
 				C020C8C12282469F0041A5EC /* BaseViewController.m in Sources */,
 				C090C93222815249007ECDBD /* ViewController.m in Sources */,
 				C0F8BB122293CD600018978D /* RunLoopSource.m in Sources */,
