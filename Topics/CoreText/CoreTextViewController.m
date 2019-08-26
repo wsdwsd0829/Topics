@@ -45,8 +45,6 @@
   label.numberOfLines = 0;
   label.frame = CGRectMake(10, 310, 300, 400);
   [self.view addSubview:label];
-
-  CTFrame
 }
 
 @end

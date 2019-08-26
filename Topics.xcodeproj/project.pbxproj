@@ -130,6 +130,8 @@
 				C08553492313AF5C003EAE34 /* CoreTextViewController.m */,
 			);
 			path = CoreText;
+            sourceTree = "<group>";
+        };
 		C056751622924BEB005177C6 /* AutoReleaseViewController */ = {
 			isa = PBXGroup;
 			children = (
