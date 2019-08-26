@@ -18,7 +18,7 @@
 @end
 @implementation FakeObj
 - (void)fakeMethod {
-  NSLog(@"^^^ calling fake Method");
+//  NSLog(@"^^^ calling fake Method");
 }
 @end
 
@@ -51,6 +51,7 @@
   }
 }
 
+// weak pointer, conformsToProtocol? => TODO: objc4 source code
 - (void)testCallingToConformToProtocolALot {
   for (int i = 0; i < 1000; i++) {
     kdebug_signpost_start(1000, 0, 0, 0, 0);

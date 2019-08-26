@@ -109,7 +109,9 @@ void myObserver(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void 
   [source fireAllCommandsOnRunLoop:CFRunLoopGetCurrent()];
 
   // Why this not working?! may be the thread is gone when block finishes.
-  // TODO try create a thread & see how Texture uses runloop. 
+  // TODO try create a thread & see how Texture uses runloop.
+  // ASDK use thread pool
+  // Runloop use the thread it's created on.
   /*
   __block CFRunLoopRef ref;
   dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
