@@ -11,6 +11,8 @@
 		C020C8C12282469F0041A5EC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C020C8C02282469F0041A5EC /* BaseViewController.m */; };
 		C020C8C4228258EF0041A5EC /* BaseWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C020C8C3228258EF0041A5EC /* BaseWindow.m */; };
 		C0359CEB231458540021C865 /* CoreTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0359CEA231458540021C865 /* CoreTextView.m */; };
+		C0359D132314E30B0021C865 /* HitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0359D122314E30B0021C865 /* HitTestViewController.m */; };
+		C0359D162314E3380021C865 /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0359D152314E3380021C865 /* HitTestView.m */; };
 		C056751522923960005177C6 /* PerfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C056751422923960005177C6 /* PerfViewController.m */; };
 		C056751922924C05005177C6 /* AutoReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C056751822924C05005177C6 /* AutoReleaseViewController.m */; };
 		C085534A2313AF5C003EAE34 /* CoreTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C08553492313AF5C003EAE34 /* CoreTextViewController.m */; };
@@ -53,6 +55,10 @@
 		C020C8C3228258EF0041A5EC /* BaseWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseWindow.m; sourceTree = "<group>"; };
 		C0359CE9231458540021C865 /* CoreTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextView.h; sourceTree = "<group>"; };
 		C0359CEA231458540021C865 /* CoreTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextView.m; sourceTree = "<group>"; };
+		C0359D112314E30B0021C865 /* HitTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitTestViewController.h; sourceTree = "<group>"; };
+		C0359D122314E30B0021C865 /* HitTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitTestViewController.m; sourceTree = "<group>"; };
+		C0359D142314E3380021C865 /* HitTestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HitTestView.h; sourceTree = "<group>"; };
+		C0359D152314E3380021C865 /* HitTestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HitTestView.m; sourceTree = "<group>"; };
 		C056751322923960005177C6 /* PerfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PerfViewController.h; sourceTree = "<group>"; };
 		C056751422923960005177C6 /* PerfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerfViewController.m; sourceTree = "<group>"; };
 		C056751722924C05005177C6 /* AutoReleaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoReleaseViewController.h; sourceTree = "<group>"; };
@@ -117,6 +123,17 @@
 			path = Orientation;
 			sourceTree = "<group>";
 		};
+		C0359D102314E2920021C865 /* HitTest */ = {
+			isa = PBXGroup;
+			children = (
+				C0359D122314E30B0021C865 /* HitTestViewController.m */,
+				C0359D112314E30B0021C865 /* HitTestViewController.h */,
+				C0359D142314E3380021C865 /* HitTestView.h */,
+				C0359D152314E3380021C865 /* HitTestView.m */,
+			);
+			path = HitTest;
+			sourceTree = "<group>";
+		};
 		C056751222923942005177C6 /* Performance */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +186,7 @@
 		C090C92C22815249007ECDBD /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				C0359D102314E2920021C865 /* HitTest */,
 				C08553472313AEA6003EAE34 /* CoreText */,
 				C056751622924BEB005177C6 /* AutoReleaseViewController */,
 				C056751222923942005177C6 /* Performance */,
@@ -360,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0359D132314E30B0021C865 /* HitTestViewController.m in Sources */,
 				C056751522923960005177C6 /* PerfViewController.m in Sources */,
 				C056751922924C05005177C6 /* AutoReleaseViewController.m in Sources */,
 				C090C962228154B9007ECDBD /* RunLoopViewController.m in Sources */,
@@ -367,6 +386,7 @@
 				C020C8C12282469F0041A5EC /* BaseViewController.m in Sources */,
 				C090C93222815249007ECDBD /* ViewController.m in Sources */,
 				C0F8BB122293CD600018978D /* RunLoopSource.m in Sources */,
+				C0359D162314E3380021C865 /* HitTestView.m in Sources */,
 				C0F8BB0A228E96CD0018978D /* GCDViewController.m in Sources */,
 				C020C8C4228258EF0041A5EC /* BaseWindow.m in Sources */,
 				C020C8BE22823D5F0041A5EC /* OrientationViewController.m in Sources */,
