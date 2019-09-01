@@ -15,6 +15,7 @@
 		C0359D162314E3380021C865 /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0359D152314E3380021C865 /* HitTestView.m */; };
 		C056751522923960005177C6 /* PerfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C056751422923960005177C6 /* PerfViewController.m */; };
 		C056751922924C05005177C6 /* AutoReleaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C056751822924C05005177C6 /* AutoReleaseViewController.m */; };
+		C084E6EA231C77CA00A68746 /* KeyboardTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C084E6E9231C77CA00A68746 /* KeyboardTypeViewController.m */; };
 		C085534A2313AF5C003EAE34 /* CoreTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C08553492313AF5C003EAE34 /* CoreTextViewController.m */; };
 		C090C92F22815249007ECDBD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C92E22815249007ECDBD /* AppDelegate.m */; };
 		C090C93222815249007ECDBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C090C93122815249007ECDBD /* ViewController.m */; };
@@ -63,6 +64,8 @@
 		C056751422923960005177C6 /* PerfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PerfViewController.m; sourceTree = "<group>"; };
 		C056751722924C05005177C6 /* AutoReleaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoReleaseViewController.h; sourceTree = "<group>"; };
 		C056751822924C05005177C6 /* AutoReleaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoReleaseViewController.m; sourceTree = "<group>"; };
+		C084E6E8231C77CA00A68746 /* KeyboardTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardTypeViewController.h; sourceTree = "<group>"; };
+		C084E6E9231C77CA00A68746 /* KeyboardTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardTypeViewController.m; sourceTree = "<group>"; };
 		C08553482313AF5C003EAE34 /* CoreTextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreTextViewController.h; sourceTree = "<group>"; };
 		C08553492313AF5C003EAE34 /* CoreTextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreTextViewController.m; sourceTree = "<group>"; };
 		C090C92A22815249007ECDBD /* Topics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Topics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +155,15 @@
 			path = AutoReleaseViewController;
 			sourceTree = "<group>";
 		};
+		C084E6E4231C770500A68746 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C084E6E8231C77CA00A68746 /* KeyboardTypeViewController.h */,
+				C084E6E9231C77CA00A68746 /* KeyboardTypeViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		C08553472313AEA6003EAE34 /* CoreText */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +198,7 @@
 		C090C92C22815249007ECDBD /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				C084E6E4231C770500A68746 /* UI */,
 				C0359D102314E2920021C865 /* HitTest */,
 				C08553472313AEA6003EAE34 /* CoreText */,
 				C056751622924BEB005177C6 /* AutoReleaseViewController */,
@@ -387,6 +400,7 @@
 				C090C93222815249007ECDBD /* ViewController.m in Sources */,
 				C0F8BB122293CD600018978D /* RunLoopSource.m in Sources */,
 				C0359D162314E3380021C865 /* HitTestView.m in Sources */,
+				C084E6EA231C77CA00A68746 /* KeyboardTypeViewController.m in Sources */,
 				C0F8BB0A228E96CD0018978D /* GCDViewController.m in Sources */,
 				C020C8C4228258EF0041A5EC /* BaseWindow.m in Sources */,
 				C020C8BE22823D5F0041A5EC /* OrientationViewController.m in Sources */,
