@@ -7,6 +7,8 @@ target 'Topics' do
 
   # Pods for Topics
 
+  pod 'IGListKit', '~> 3.4.0'
+
   target 'TopicsTests' do
     inherit! :search_paths
     # Pods for testing
