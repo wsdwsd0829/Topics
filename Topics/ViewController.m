@@ -16,6 +16,7 @@
 #import "AutoReleaseViewController/AutoReleaseViewController.h"
 #import "HitTest/HitTestViewController.h"
 #import "UI/KeyboardTypeViewController.h"
+#import "DisplayLink/DisplayLinkViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -42,7 +43,7 @@
 
 // To add item: 1. add to enum, 2. add _topicTitles, _topicViewControllerClasses, 3 impl ViewController
 - (void)setupTable {
-  _topicTitles = @[@"RunLoop", @"Orientation", @"GCD",  @"Performance", @"AutoRelease", @"CoreText", @"HitTest", @"KeyboardType"];
+  _topicTitles = @[@"RunLoop", @"Orientation", @"GCD",  @"Performance", @"AutoRelease", @"CoreText", @"HitTest", @"KeyboardType", @"DisplayLink"];
   _topicViewControllerClasses = @[ [RunLoopViewController class],
                                    [OrientationViewController class],
                                    [GCDViewController class],
@@ -51,6 +52,7 @@
                                    [CoreTextViewController class],
                                    [HitTestViewController class],
                                    [KeyboardTypeViewController class],
+                                   [DisplayLinkViewController class],
                                 ];
 //  NSAssert(_topicTitles.count == TopicAll, @"_topicTitles should match all Topic except 'TopicAll'");
 //  NSAssert(_topicViewControllerClasses.count == TopicAll, @"_topicTitles should match all Topic except 'TopicAll'");
