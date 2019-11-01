@@ -34,6 +34,8 @@
 		C0BEB5012345497B000E4E69 /* DisplayLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BEB5002345497B000E4E69 /* DisplayLinkViewController.m */; };
 		C0C5DCEA235568F400AF2B70 /* IGListKitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C5DCE9235568F400AF2B70 /* IGListKitViewController.m */; };
 		C0D8E118236BBE9000A915B0 /* WSDCollectionTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D8E117236BBE9000A915B0 /* WSDCollectionTestViewController.m */; };
+		C0E82985235A767E007376BA /* WSDCoreGraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E82984235A767E007376BA /* WSDCoreGraphicsViewController.m */; };
+		C0E82988235A768C007376BA /* WSDDoodleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E82987235A768C007376BA /* WSDDoodleView.m */; };
 		C0F8BB0A228E96CD0018978D /* GCDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F8BB09228E96CD0018978D /* GCDViewController.m */; };
 		C0F8BB122293CD600018978D /* RunLoopSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C0F8BB112293CD600018978D /* RunLoopSource.m */; };
 /* End PBXBuildFile section */
@@ -111,6 +113,10 @@
 		C0C5DCE9235568F400AF2B70 /* IGListKitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGListKitViewController.m; sourceTree = "<group>"; };
 		C0D8E116236BBE9000A915B0 /* WSDCollectionTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSDCollectionTestViewController.h; sourceTree = "<group>"; };
 		C0D8E117236BBE9000A915B0 /* WSDCollectionTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSDCollectionTestViewController.m; sourceTree = "<group>"; };
+		C0E82983235A767E007376BA /* WSDCoreGraphicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSDCoreGraphicsViewController.h; sourceTree = "<group>"; };
+		C0E82984235A767E007376BA /* WSDCoreGraphicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSDCoreGraphicsViewController.m; sourceTree = "<group>"; };
+		C0E82986235A768C007376BA /* WSDDoodleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSDDoodleView.h; sourceTree = "<group>"; };
+		C0E82987235A768C007376BA /* WSDDoodleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSDDoodleView.m; sourceTree = "<group>"; };
 		C0F8BB08228E96CD0018978D /* GCDViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDViewController.h; sourceTree = "<group>"; };
 		C0F8BB09228E96CD0018978D /* GCDViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDViewController.m; sourceTree = "<group>"; };
 		C0F8BB102293CD600018978D /* RunLoopSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RunLoopSource.h; sourceTree = "<group>"; };
@@ -251,6 +257,7 @@
 				C0D8E115236BBE7A00A915B0 /* Collection */,
 				C06473592368AE97002C2425 /* OffScreenRendering */,
 				C0C5DCE4235568BE00AF2B70 /* IGListKit */,
+				C0E8297F235A7637007376BA /* CoreGraphics */,
 				C0BEB4FE2345496D000E4E69 /* DisplayLink */,
 				C084E6E4231C770500A68746 /* UI */,
 				C0359D102314E2920021C865 /* HitTest */,
@@ -332,6 +339,17 @@
 				C0D8E117236BBE9000A915B0 /* WSDCollectionTestViewController.m */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		C0E8297F235A7637007376BA /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				C0E82983235A767E007376BA /* WSDCoreGraphicsViewController.h */,
+				C0E82984235A767E007376BA /* WSDCoreGraphicsViewController.m */,
+				C0E82986235A768C007376BA /* WSDDoodleView.h */,
+				C0E82987235A768C007376BA /* WSDDoodleView.m */,
+			);
+			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
 		C0F8BB04228E96670018978D /* GCD */ = {
@@ -607,12 +625,14 @@
 				C0F8BB122293CD600018978D /* RunLoopSource.m in Sources */,
 				C0359D162314E3380021C865 /* HitTestView.m in Sources */,
 				C084E6EA231C77CA00A68746 /* KeyboardTypeViewController.m in Sources */,
+				C0E82985235A767E007376BA /* WSDCoreGraphicsViewController.m in Sources */,
 				C0F8BB0A228E96CD0018978D /* GCDViewController.m in Sources */,
 				C020C8C4228258EF0041A5EC /* BaseWindow.m in Sources */,
 				C020C8BE22823D5F0041A5EC /* OrientationViewController.m in Sources */,
 				C0D8E118236BBE9000A915B0 /* WSDCollectionTestViewController.m in Sources */,
 				C090C93D2281524B007ECDBD /* main.m in Sources */,
 				C0C5DCEA235568F400AF2B70 /* IGListKitViewController.m in Sources */,
+				C0E82988235A768C007376BA /* WSDDoodleView.m in Sources */,
 				C090C92F22815249007ECDBD /* AppDelegate.m in Sources */,
 				C085534A2313AF5C003EAE34 /* CoreTextViewController.m in Sources */,
 			);
