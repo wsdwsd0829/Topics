@@ -17,7 +17,9 @@
 #import "HitTest/HitTestViewController.h"
 #import "UI/KeyboardTypeViewController.h"
 #import "DisplayLink/DisplayLinkViewController.h"
-
+#import "IGListKitViewController.h"
+#import "OffScreenRendering/OffScreenRenderingViewController.h"
+#import "Collection/WSDCollectionTestViewController.h"
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) UITableView *tableView;
@@ -43,7 +45,7 @@
 
 // To add item: 1. add to enum, 2. add _topicTitles, _topicViewControllerClasses, 3 impl ViewController
 - (void)setupTable {
-  _topicTitles = @[@"RunLoop", @"Orientation", @"GCD",  @"Performance", @"AutoRelease", @"CoreText", @"HitTest", @"KeyboardType", @"DisplayLink"];
+  _topicTitles = @[@"RunLoop", @"Orientation", @"GCD",  @"Performance", @"AutoRelease", @"CoreText", @"HitTest", @"KeyboardType", @"DisplayLink", @"IGListKit", @"OffScreenRendering", @"Collection"];
   _topicViewControllerClasses = @[ [RunLoopViewController class],
                                    [OrientationViewController class],
                                    [GCDViewController class],
@@ -53,6 +55,9 @@
                                    [HitTestViewController class],
                                    [KeyboardTypeViewController class],
                                    [DisplayLinkViewController class],
+                                   [IGListKitViewController class],
+                                   [OffScreenRenderingViewController class],
+                                   [WSDCollectionTestViewController class],
                                 ];
 //  NSAssert(_topicTitles.count == TopicAll, @"_topicTitles should match all Topic except 'TopicAll'");
 //  NSAssert(_topicViewControllerClasses.count == TopicAll, @"_topicTitles should match all Topic except 'TopicAll'");
