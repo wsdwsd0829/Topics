@@ -57,8 +57,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     surveyCollectionView.delegate = self;
     
     //Register our classes so we can use our custom subclassed cell and header
-    [surveyCollectionView registerClass:[AFCollectionViewCell class] forCellWithReuseIdentifier:CellIdentifier];
-    [surveyCollectionView registerClass:[AFCollectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:HeaderIdentifier];
+    // TODO: register cell and header
     
     //Set up the collection view geometry to cover the whole screen in any orientation and other view properties
     surveyCollectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -173,7 +172,7 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
 {
     //Provides a view for the headers in the collection view
     
-    AFCollectionHeaderView *headerView = (AFCollectionHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:HeaderIdentifier forIndexPath:indexPath];
+    // TODO: Dequeue to create headerView
     
     if (indexPath.section == 0)
     {
@@ -218,8 +217,8 @@ static NSString *HeaderIdentifier = @"HeaderIdentifier";
     
     [collectionView performBatchUpdates:^{
         currentModelArrayIndex++;
-        [collectionView insertSections:[NSIndexSet indexSetWithIndex:currentModelArrayIndex]];
-        [collectionView reloadSections:[NSIndexSet indexSetWithIndex:currentModelArrayIndex-1]];
+        // TODO: insert section with index currentModelArrayIndex
+        // TODO: reload section with index currentModelArrayIndex-1
     } completion:^(BOOL finished) {
         [collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:currentModelArrayIndex] atScrollPosition:UICollectionViewScrollPositionTop animated:YES];
     }];
