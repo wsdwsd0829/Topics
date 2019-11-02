@@ -7,7 +7,25 @@
 		<key>Topics.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C090C92922815249007ECDBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C090C9412281524B007ECDBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C090C94C2281524B007ECDBD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
