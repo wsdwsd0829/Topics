@@ -17,8 +17,7 @@
 {
     if (!(self = [super initWithFrame:frame])) return nil;
     
-    self.backgroundColor = [UIColor whiteColor];
-    
+    // TODO: while background color.
     // TODO: create image view with inset 10.
     // TODO: set selectedBackgroundView with whit color and alpha 0.8.
     
@@ -35,24 +34,11 @@
 -(void)prepareForReuse
 {
     [super prepareForReuse];
-    
-    self.backgroundColor = [UIColor whiteColor];
-    self.image = nil; //also resets imageView’s image
+    // TODO: clear background color and set image to nil.
 }
 
--(void)setHighlighted:(BOOL)highlighted
-{
-    [super setHighlighted:highlighted];
-    
-    if (self.highlighted)
-    {
-        imageView.alpha = 0.8f;
-    }
-    else
-    {
-        imageView.alpha = 1.0f;
-    }
-}
+// TODO: override setHighlight when highlighted imageView's alpha to 0.8.
+
 
 #pragma mark - Overridden Properties
 
