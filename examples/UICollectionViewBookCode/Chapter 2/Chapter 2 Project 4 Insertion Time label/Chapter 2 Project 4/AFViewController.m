@@ -80,26 +80,16 @@ static NSString *CellIdentifier = @"Cell Identifier";
 {
     AFCollectionViewCell *cell = (AFCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
   id item = datesArray[indexPath.row];
-  NSString * str;
+  NSString * str = @"";
   if ([item isKindOfClass:[NSDate class]]) {
-    str = [dateFormatter stringFromDate:datesArray[indexPath.row]];
+    // TODO: get string from dataFormatter.
+//    str = [dateFormatter stringFromDate:datesArray[indexPath.row]];
   } else {
     str = item;
   }
     cell.text = str;//
     NSLog(@"indexPath %@", indexPath);
     return cell;
-}
-
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-//  ((UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout).minimumInteritemSpacing = 200;
-  AFCollectionViewFlowLayout *layout = (AFCollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
-  [layout.invalidatedIndexPaths addObject:indexPath];
-
-  UICollectionViewFlowLayoutInvalidationContext *context = [[UICollectionViewFlowLayoutInvalidationContext alloc] init];
-  [context invalidateItemsAtIndexPaths:@[indexPath]];
-//  [self.collectionView.collectionViewLayout invalidateLayoutWithContext:context];
-  [self.collectionView.collectionViewLayout invalidateLayout];
 }
 
 #pragma mark - User Interface Interaction Methods
@@ -134,13 +124,10 @@ static NSString *CellIdentifier = @"Cell Identifier";
 //    } completion:nil];
 
   //create a new date object and update our model
-  NSDate *newDate = [NSDate date];
-  [datesArray insertObject:newDate atIndex:0];
+  // TODO: Create a date and add to data source.
 
   //update our collection view
-  [self.collectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:0 inSection:0]]];
-
-
+  // TODO: Insert to first indexPath
 
   //update our collection view
   // ??? over insertion will not work.

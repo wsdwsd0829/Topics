@@ -19,12 +19,8 @@
     
     self.backgroundColor = [UIColor whiteColor];
     
-    imageView = [[UIImageView alloc] initWithFrame:CGRectInset(self.bounds, 10, 10)];
-    [self.contentView addSubview:imageView];
-    
-    UIView *selectedBackgroundView = [[UIView alloc] initWithFrame:CGRectZero];
-    selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:1.0f alpha:0.8f];
-    self.selectedBackgroundView = selectedBackgroundView; // will be removed when unselected.
+    // TODO: create image view with inset 10.
+    // TODO: set selectedBackgroundView with whit color and alpha 0.8.
     
     return self;
 }
