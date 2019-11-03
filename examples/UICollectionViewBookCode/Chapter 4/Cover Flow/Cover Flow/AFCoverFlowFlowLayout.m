@@ -77,7 +77,8 @@
     UICollectionViewLayoutAttributes *attributes = [super layoutAttributesForItemAtIndexPath:indexPath];
     
     // We're going to calculate the rect of the collection view visible to the user.
-    CGRect visibleRect = CGRectMake(self.collectionView.contentOffset.x, self.collectionView.contentOffset.y, CGRectGetWidth(self.collectionView.bounds), CGRectGetHeight(self.collectionView.bounds));
+    
+    // TODO: Get visibleRect
     
     [self applyLayoutAttributes:attributes forVisibleRect:visibleRect];
     
@@ -91,11 +92,8 @@
     // First, calculate the proposed center of the collection view once the collection view has stopped
     CGFloat offsetAdjustment = MAXFLOAT;
     CGFloat horizontalCenter = proposedContentOffset.x + (CGRectGetWidth(self.collectionView.bounds) / 2.0);
-    // Use the center to find the proposed visible rect.
-    CGRect proposedRect = CGRectMake(proposedContentOffset.x, 0.0, self.collectionView.bounds.size.width, self.collectionView.bounds.size.height);
     
-    // Get the attributes for the cells in that rect.
-    NSArray* array = [self layoutAttributesForElementsInRect:proposedRect];
+    // TODO: find all attributes in proposedRect
     
     // This loop will find the closest cell to proposed center of the collection view
     for (UICollectionViewLayoutAttributes* layoutAttributes in array)
@@ -127,7 +125,8 @@
     // Calculate the distance from the center of the visible rect to the center of the attributes.
     // Then normalize it so we can compare them all. This way, all items further away than the
     // active get the same transform.
-    CGFloat distanceFromVisibleRectToItem = CGRectGetMidX(visibleRect) - attributes.center.x;
+    // TODO: calculate distanceFromVisibleRectToItem  (atcually item to midx of visible rect.
+    
     CGFloat normalizedDistance = distanceFromVisibleRectToItem / ACTIVE_DISTANCE;
     BOOL isLeft = distanceFromVisibleRectToItem > 0;
     CATransform3D transform = CATransform3DIdentity;

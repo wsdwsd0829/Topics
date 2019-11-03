@@ -45,9 +45,7 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
         CGFloat rightMargin = [self sectionInset].right;
         
         NSUInteger itemsInSection = [[self collectionView] numberOfItemsInSection:attributes.indexPath.section];
-        CGFloat firstXPosition = (width - (leftMargin + rightMargin)) / (2 * itemsInSection);
-        CGFloat xPosition = firstXPosition + (2*firstXPosition*attributes.indexPath.item);
-        
+        // TODO: calculate firstXPosition and xPosition
         attributes.center = CGPointMake(leftMargin + xPosition, attributes.center.y);
         attributes.frame = CGRectIntegral(attributes.frame);
     }
@@ -69,9 +67,7 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
         
         if (attributes.representedElementCategory == UICollectionElementCategorySupplementaryView)
         {
-            UICollectionViewLayoutAttributes *newAttributes = [self layoutAttributesForDecorationViewOfKind:AFCollectionViewFlowLayoutBackgroundDecoration atIndexPath:attributes.indexPath];
-            
-            [newAttributesArray addObject:newAttributes];
+            // TODO: create attribute for Decoration view using AFCollectionViewFlowLayoutBackgroundDecoration and add to array.
         }
     }
     
@@ -100,25 +96,15 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
         UICollectionViewLayoutAttributes *tallestCellAttributes;
         NSInteger numberOfCellsInSection = [self.collectionView numberOfItemsInSection:indexPath.section];
         
-        for (NSInteger i = 0; i < numberOfCellsInSection; i++)
-        {
-            NSIndexPath *cellIndexPath = [NSIndexPath indexPathForItem:i inSection:indexPath.section];
-            
-            UICollectionViewLayoutAttributes *cellAttribtes = [self layoutAttributesForItemAtIndexPath:cellIndexPath];
-            
-            if (CGRectGetHeight(cellAttribtes.frame) > CGRectGetHeight(tallestCellAttributes.frame))
-            {
-                tallestCellAttributes = cellAttribtes;
-            }
-        }
+        // TODO: Calculate tallestCellAttributes
         
         CGFloat decorationViewHeight = CGRectGetHeight(tallestCellAttributes.frame) + self.headerReferenceSize.height;
         
         layoutAttributes.size = CGSizeMake([self collectionViewContentSize].width, decorationViewHeight);
         layoutAttributes.center = CGPointMake([self collectionViewContentSize].width / 2.0f, tallestCellAttributes.center.y);
         layoutAttributes.frame = CGRectIntegral(layoutAttributes.frame);
-        // Place the decoration view behind all the cells
-        layoutAttributes.zIndex = -1;
+        // TODO: Place the decoration view behind all the cells: zIndex = -1;
+        
     }
     
     return layoutAttributes;
@@ -129,20 +115,14 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
 -(void)prepareForCollectionViewUpdates:(NSArray *)updateItems
 {
     [super prepareForCollectionViewUpdates:updateItems];
-    
-    [updateItems enumerateObjectsUsingBlock:^(UICollectionViewUpdateItem *updateItem, NSUInteger idx, BOOL *stop) {
-        if (updateItem.updateAction == UICollectionUpdateActionInsert)
-        {
-            [insertedSectionSet addObject:@(updateItem.indexPathAfterUpdate.section)];
-        }
-    }];
+    // TODO: enumerate updateItems for insertion and add to insertedSectionSet
+
 }
 
 -(void)finalizeCollectionViewUpdates
 {
     [super finalizeCollectionViewUpdates];
-    
-    [insertedSectionSet removeAllObjects];
+    // TODO: remvoe all objets from insertedSectionSet.
 }
 
 -(UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingDecorationElementOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)decorationIndexPath
@@ -157,7 +137,7 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
         {
             layoutAttributes = [self layoutAttributesForDecorationViewOfKind:elementKind atIndexPath:decorationIndexPath];
             layoutAttributes.alpha = 0.0f;
-            layoutAttributes.transform3D = CATransform3DMakeTranslation(-CGRectGetWidth(layoutAttributes.frame), 0, 0);
+            // TODO: set transfrom3D with x translation to -width using CATransform3DMakeTranslation.
         }
     }
     
@@ -173,7 +153,7 @@ NSString * const AFCollectionViewFlowLayoutBackgroundDecoration = @"DecorationId
     if ([insertedSectionSet containsObject:@(itemIndexPath.section)])
     {
         layoutAttributes = [self layoutAttributesForItemAtIndexPath:itemIndexPath];
-        layoutAttributes.transform3D = CATransform3DMakeTranslation([self collectionViewContentSize].width, 0, 0);
+        // TODO: set transfrom3D with x translation to width using CATransform3DMakeTranslation.
     }
     
     return layoutAttributes;

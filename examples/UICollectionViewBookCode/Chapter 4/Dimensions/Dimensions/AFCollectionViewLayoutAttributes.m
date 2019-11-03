@@ -12,16 +12,14 @@
 
 -(id)copyWithZone:(NSZone *)zone
 {
-    AFCollectionViewLayoutAttributes *attributes = [super copyWithZone:zone];
+    // TODO: implement this;
     
-    attributes.layoutMode = self.layoutMode;
-    
-    return attributes;
 }
 
 // New in iOS 7: You'll need this method from now on. 
 -(BOOL)isEqual:(id)object {
-    return [super isEqual:object] && (self.layoutMode == [object layoutMode]);
+    // TODO: implement this.
+    
 }
 
 @end

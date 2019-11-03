@@ -23,11 +23,7 @@
     return self;
 }
 
-+(Class)layoutAttributesClass
-{
-    // Important for letting UICollectionView know what kind of attributes to use.
-    return [AFCollectionViewLayoutAttributes class];
-}
+// TODO: implement layoutAttributesClass.
 
 #pragma mark - Private Helper Methods
 
@@ -79,8 +75,7 @@
     _layoutMode = layoutMode;
     
     // then invalidate our layout.
-//    [self invalidateLayout];
-  [self.collectionView performBatchUpdates:^{} completion:nil];
+    // TODO: invalidate layout or perform batchupdates.
 }
 
 @end
