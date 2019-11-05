@@ -112,21 +112,15 @@ static NSString *CellIdentifier = @"CellIdentifier";
 
 -(void)addItem
 {
-    [self.collectionView performBatchUpdates:^{
-        self.cellCount = self.cellCount + 1;
-        [self.collectionView insertItemsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForItem:self.cellCount-1 inSection:0]]];
-    } completion:nil];
+    // TODO: insert at index before data source changes.
 }
 
 -(void)deleteItem
 {
-    // Always have at least once cell in our collection view
-    if (self.cellCount == 1) return;
+    // TODO: Always have at least once cell in our collection view
     
-    [self.collectionView performBatchUpdates:^{
-        self.cellCount = self.cellCount - 1;
-        [self.collectionView deleteItemsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForItem:self.cellCount inSection:0]]];
-    } completion:nil];
+    // TODO: batch update: data source, and delete at the index before date source changes
+
 }
 
 #pragma mark - UICollectionView Delegate & DataSource Methods

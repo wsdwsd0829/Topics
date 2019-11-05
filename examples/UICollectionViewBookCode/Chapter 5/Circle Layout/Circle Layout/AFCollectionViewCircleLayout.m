@@ -60,7 +60,7 @@ static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)path
 {
-    UICollectionViewLayoutAttributes* attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:path];
+    // TODO: Create attributes from UICollectionViewLayoutAttributes class method.
     
     attributes.size = CGSizeMake(kItemDimension, kItemDimension);
     attributes.center = CGPointMake(self.center.x + self.radius * cosf(2 * path.item * M_PI / self.cellCount - M_PI_2), self.center.y + self.radius * sinf(2 * path.item * M_PI / self.cellCount - M_PI_2));
@@ -73,12 +73,9 @@ static NSString *AFCollectionViewFlowDecoration = @"DecorationView";
 {
     NSMutableArray* attributes = [NSMutableArray array];
     
-    for (NSInteger i = 0 ; i < self.cellCount; i++)
-    {
-        NSIndexPath* indexPath = [NSIndexPath indexPathForItem:i inSection:0];
-        [attributes addObject:[self layoutAttributesForItemAtIndexPath:indexPath]];
-    }
+    // TODO: loop cell count and add each attribute with indexPath.
     
+    // ??? only need when center of attrs is in rect? 
     if (CGRectContainsPoint(rect, self.center))
     {
         [attributes addObject:[self layoutAttributesForDecorationViewOfKind:AFCollectionViewFlowDecoration atIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]]];
