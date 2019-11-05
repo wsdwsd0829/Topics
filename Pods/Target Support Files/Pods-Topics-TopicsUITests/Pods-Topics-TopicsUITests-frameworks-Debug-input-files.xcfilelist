@@ -1,2 +1,6 @@
 ${PODS_ROOT}/Target Support Files/Pods-Topics-TopicsUITests/Pods-Topics-TopicsUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework
+${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework
+${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework
+${BUILT_PRODUCTS_DIR}/PINRemoteImage/PINRemoteImage.framework
+${BUILT_PRODUCTS_DIR}/Texture/AsyncDisplayKit.framework

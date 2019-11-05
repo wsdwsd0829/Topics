@@ -6,7 +6,7 @@ target 'Topics' do
   use_frameworks!
 
   # Pods for Topics
-
+  pod "Texture"
   pod 'IGListKit', '~> 3.4.0'
 
   target 'TopicsTests' do
